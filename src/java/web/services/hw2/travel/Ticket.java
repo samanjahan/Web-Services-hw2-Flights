@@ -23,14 +23,14 @@ public class Ticket {
        Flight flight5 = new Flight();
        
        flight.setDeparture("stockholm");
-       flight.setStop("skövde");
+       flight.setChange("skövde");
        flight.setDestination("göteborg");
        flight.setPrice(400);
        flight.setDate("2015-02-02");
        flightList.add(flight);
        
        flight2.setDeparture("stockholm");
-       flight2.setStop("katrinholm");
+       flight2.setChange("katrinholm");
        flight2.setDestination("göteborg");
        flight2.setPrice(300);
        flight2.setDate("2015-02-12");
@@ -39,7 +39,7 @@ public class Ticket {
         
        flight3.setDeparture("stockholm");
        flight3.setDestination("göteborg");
-       flight3.setStop("borås");
+       flight3.setChange("borås");
        flight3.setPrice(300);
        flight3.setDate("2015-02-15");
        flightList.add(flight3);
@@ -47,14 +47,14 @@ public class Ticket {
        
        flight4.setDeparture("danmark");
        flight4.setDestination("bremen");
-       flight4.setStop("hamburg");
+       flight4.setChange("hamburg");
        flight4.setPrice(1300);
        flight4.setDate("2015-02-17");
        flightList.add(flight4);
        
        flight5.setDeparture("danmark");
        flight5.setDestination("bremen");
-       flight5.setStop("berlin");
+       flight5.setChange("berlin");
        flight5.setPrice(1300);
        flight5.setDate("2015-02-17");
        flightList.add(flight5);
