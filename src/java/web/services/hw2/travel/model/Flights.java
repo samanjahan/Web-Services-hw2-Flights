@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package web.services.hw2.travel;
+package web.services.hw2.travel.model;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,11 +11,11 @@ import java.util.List;
  *
  * @author syst3m
  */
-public class Ticket {
+public class Flights {
    private static List <Flight> flightList = new ArrayList<Flight>(); 
  
 
-   public Ticket(){
+   public Flights(){
        Flight flight = new Flight();
        Flight flight2 = new Flight();
        Flight flight3 = new Flight();
@@ -23,15 +23,15 @@ public class Ticket {
        Flight flight5 = new Flight();
        
        flight.setDeparture("stockholm");
-       flight.setChange("skövde");
        flight.setDestination("göteborg");
        flight.setPrice(400);
+       flight.setFlightNr("MN14G");
        flight.setDate("2015-02-02");
        flightList.add(flight);
        
        flight2.setDeparture("stockholm");
-       flight2.setChange("katrinholm");
        flight2.setDestination("göteborg");
+       flight2.setFlightNr("IX124");
        flight2.setPrice(300);
        flight2.setDate("2015-02-12");
        flightList.add(flight2);
@@ -39,7 +39,7 @@ public class Ticket {
         
        flight3.setDeparture("stockholm");
        flight3.setDestination("göteborg");
-       flight3.setChange("borås");
+       flight3.setFlightNr("LK19F");
        flight3.setPrice(300);
        flight3.setDate("2015-02-15");
        flightList.add(flight3);
@@ -47,14 +47,14 @@ public class Ticket {
        
        flight4.setDeparture("danmark");
        flight4.setDestination("bremen");
-       flight4.setChange("hamburg");
+       flight4.setFlightNr("KA193");
        flight4.setPrice(1300);
        flight4.setDate("2015-02-17");
        flightList.add(flight4);
        
        flight5.setDeparture("danmark");
        flight5.setDestination("bremen");
-       flight5.setChange("berlin");
+       flight5.setFlightNr("PO19F");
        flight5.setPrice(1300);
        flight5.setDate("2015-02-17");
        flightList.add(flight5);
