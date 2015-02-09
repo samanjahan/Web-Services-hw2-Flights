@@ -17,9 +17,9 @@ import web.services.hw2.travel.model.Trip;
  *
  * @author Alex
  */
-@WebService(serviceName = "TravelAgencyWS")
+@WebService(serviceName = "FlightCheckerWS")
 @Stateless()
-public class TravelAgencyWS {
+public class FlightCheckerWS {
 
 
     /**
