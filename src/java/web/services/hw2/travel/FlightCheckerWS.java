@@ -11,15 +11,16 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.ejb.Stateless;
+import web.services.hw2.travel.model.Flights;
 import web.services.hw2.travel.model.Trip;
 
 /**
  *
  * @author Alex
  */
-@WebService(serviceName = "TravelAgencyWS")
+@WebService(serviceName = "FlightCheckerWS")
 @Stateless()
-public class TravelAgencyWS {
+public class FlightCheckerWS {
 
 
     /**
@@ -30,9 +31,10 @@ public class TravelAgencyWS {
      * @return
      */
     @WebMethod(operationName = "checkFlight")
-    public List<Trip> checkFlight(@WebParam(name = "destination") String destination, @WebParam(name = "departure") String departure) {
-        List<Trip> trips = new ArrayList<>();
-
+    public List<Trip> checkFlight(@WebParam(name = "departure") String departure, @WebParam(name = "destination") String destination) {
+        List<Trip> trips = new ArrayList<Trip>();
+        Flights fl = new Flights();
+        trips = fl.findFligts(departure, destination);
         return trips;
     }
 
