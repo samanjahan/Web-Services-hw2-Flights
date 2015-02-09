@@ -11,7 +11,6 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.ejb.Stateless;
-import web.services.hw2.travel.model.Flight;
 import web.services.hw2.travel.model.Flights;
 import web.services.hw2.travel.model.Trip;
 
@@ -51,7 +50,7 @@ public class TravelAgencyWS {
      * @return
      */
     @WebMethod(operationName = "reserve")
-    public boolean reserve(@WebParam(name = "trip") Trip trip) {
+    public boolean reserve(@WebParam(name = "trip") int id) {
         return true;
     }
 }

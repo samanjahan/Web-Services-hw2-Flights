@@ -14,19 +14,30 @@ import java.util.List;
  */
 public class Trip {
     private List<String> trip = new ArrayList<String>();
+    
+    private int id = 0;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
      
     public Trip() {
     }
      
     public Trip(Flight newFlight) {
-         
-       String price = Double.toString(newFlight.getPrice());
-        trip.add(newFlight.getDeparture() + ":" + newFlight.getDestination() + ":"+ newFlight.getDate()+ ":" + price);
+     
+        String price = Double.toString(newFlight.getPrice());
+        trip.add(newFlight.getDeparture() + ":" + newFlight.getDestination() + ":"+ newFlight.getDate()+ ":" + price + ":" + getId());
     }
      
     public void addFlight(Flight newFlight) {
+        
         String price = Double.toString(newFlight.getPrice());
-        trip.add(newFlight.getDeparture() + ":" + newFlight.getDestination() + ":"+ newFlight.getDate()+ ":" + price);
+        trip.add(newFlight.getDeparture() + ":" + newFlight.getDestination() + ":"+ newFlight.getDate()+ ":" + price + ":" + getId());
     }
      
     public void removeFlight(Flight flight){
