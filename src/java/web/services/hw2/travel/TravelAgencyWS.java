@@ -11,6 +11,8 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.ejb.Stateless;
+import web.services.hw2.travel.model.Flight;
+import web.services.hw2.travel.model.Flights;
 import web.services.hw2.travel.model.Trip;
 
 /**
@@ -19,7 +21,7 @@ import web.services.hw2.travel.model.Trip;
  */
 @WebService(serviceName = "FlightCheckerWS")
 @Stateless()
-public class FlightCheckerWS {
+public class TravelAgencyWS {
 
 
     /**
@@ -30,10 +32,17 @@ public class FlightCheckerWS {
      * @return
      */
     @WebMethod(operationName = "checkFlight")
-    public List<Trip> checkFlight(@WebParam(name = "destination") String destination, @WebParam(name = "departure") String departure) {
+    public List<String> checkFlight(@WebParam(name = "departure") String departure,@WebParam(name = "destination") String destination) {
         List<Trip> trips = new ArrayList<>();
-
-        return trips;
+              List<String> stringlist = new ArrayList<String>();
+        Flights fl = new Flights();
+        trips = fl.findFligts(departure, destination);
+        for(int  i = 0 ; i < trips.size(); ++i){
+            String test = trips.get(i).toString();
+            System.out.println(" " + trips.toString());
+            stringlist.add(test);
+        }
+        return stringlist;
     }
 
     /**
