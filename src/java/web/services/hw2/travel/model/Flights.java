@@ -14,6 +14,7 @@ import java.util.*;
  */
 public class Flights {
    private static List <Flight> flightList = new ArrayList<Flight>();
+  private int id = 0;
   
  
    public Flights(){
@@ -110,7 +111,9 @@ public class Flights {
        for(int i = 0; i < flightList.size(); ++i){          
            if(flightList.get(i).getDeparture().equals(departure) && flightList.get(i).getDestination().equals(destination)){           
                Trip tr = new Trip();
+                tr.setId(id++);
                tr.addFlight(flightList.get(i));
+              
                ticket.add(tr);
            }
        }
@@ -135,6 +138,7 @@ public class Flights {
            Flight fldest = (Flight) flightDestination.get(i);
            if(fldepa.getDestination().equals(fldest.getDeparture()) && fldest.getDestination().equals(destination)){
                Trip tr = new Trip();
+               tr.setId(id++);
                tr.addFlight(fldepa);
                tr.addFlight(fldest);
                ticket.add(tr);          
